@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/near_chuches_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/near_chuches_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="68dp"
+        android:layout_marginRight="17dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_location" />
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/near_chuches_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17dp"
+        android:src="@drawable/ic_update"
+        android:layout_alignParentBottom="true"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_update" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        card_view:cardCornerRadius="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="2dp"
+            android:paddingLeft="0dp">
+
+            <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+                android:id="@+id/near_chuches_progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:background="@color/near_churches" />
+
+            <EditText
+                android:id="@+id/near_chuches_edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:hint="@string/near_churches_search_address"
+                android:imeOptions="actionSearch"
+                android:padding="14dp"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

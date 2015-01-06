@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <com.vagnnermartins.adbelem.view.GeneralSwipeRefreshLayout
+        android:id="@+id/events_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <ScrollView
+                android:id="@+id/events_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <SearchView
+                        android:id="@+id/events_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="@android:string/search_go" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/events_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/events_scroll" />
+
+            <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+                android:id="@+id/events_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/churches"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/events_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/event_acitivty_no_event"/>
+
+        </RelativeLayout>
+
+    </com.vagnnermartins.adbelem.view.GeneralSwipeRefreshLayout>
+</LinearLayout>

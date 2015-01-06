@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/tile_heigth"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/text_padding_left"
+    android:paddingRight="@dimen/text_padding_left"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/item_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aniversário Pastor"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/primary_text_font" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_agenda" />
+
+            <TextView
+                android:id="@+id/item_event_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:maxLines="2"
+                android:text="Dom, 4 de Janeiro de 2015"
+                android:textColor="@color/second_text"
+                android:textSize="@dimen/second_text_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_relogio" />
+
+            <TextView
+                android:id="@+id/item_event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:maxLines="2"
+                android:text="19:00"
+                android:textColor="@color/second_text"
+                android:textSize="@dimen/second_text_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

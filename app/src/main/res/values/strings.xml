@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AD Belém</string>
+    <string name="key_google_map_dev_home">AIzaSyAElC9Tt2G808nMjmXAWlhCpCQp29DhPmY</string>
+    <string name="information">INFORMAÇÕES</string>
+    <string name="location">LOCALIZAÇÃO</string>
+    <string name="agenda">AGENDA</string>
+    <string name="uninformed">Não informado</string>
+
+    <!-- Menu -->
+    <string name="menu_churches">Igrejas</string>
+    <string name="menu_near_churches">Igrejas Próximas</string>
+    <string name="menu_my_churches">Minhas Igrejas</string>
+    <string name="menu_youtube">You Tube</string>
+    <string name="menu_events">Meus Eventos</string>
+    <string name="menu_about">Sobre</string>
+
+    <!-- Fragment Igrejas -->
+    <string name="try_again">Tentar Novamente</string>
+    <string name="error_find_churches">Erro ao buscar as igrejas</string>
+    <string name="no_church">Nenhuma igreja encontrada</string>
+
+    <!-- Fragment Sobre -->
+    <string name="about">\tA Assembleia de Deus Belém é uma igreja cristã evangélica. O presidente nacional é o Pastor José Wellington Bezerra da Costa presidente também da CGADB.
+        \n\n\tComo uma igreja pentecostal, a Assembleias de Deus Ministério Belém acreditam no batismo por meio do Espírito Santo, evidenciado por meio do falar em línguas; no arrebatamento da igreja por Cristo e na doutrina da Santa Trindade.</string>
+
+    <!-- Fragment Church Detail -->
+    <string name="church_detail_worship">CULTOS SEMANAIS</string>
+    <string name="church_detail_no_worship">Nenhum culto programado</string>
+
+    <!-- Fragment Near Churches -->
+    <string name="near_churches_error">Erro ao buscar igrejas próximas</string>
+    <string name="near_churches_search_address">Pesquisar endereço</string>
+
+    <!-- Activity ChurchDetail -->
+    <string name="error_find_worship">Erro ao buscar os cultos da igreja</string>
+    <string name="church_detail_congregations">Congregações</string>
+    <string name="church_detail_follow">Seguir</string>
+    <string name="church_detail_more">Mais detalhes</string>
+    <string name="church_detail_unfollow">Deixar de seguir</string>
+    <string name="church_detail_follow_message">Você está seguindo a igreja %s</string>
+    <string name="church_detail_unfollow_message">Você parou de seguir a igreja %s</string>
+    <string name="church_detail_confirm_call_title">Confirmação</string>
+    <string name="church_detail_confirm_call_message">Deseja realizar a ligação?</string>
+    <string name="church_detail_confirm">Confirmar</string>
+
+    <!-- MainActivity -->
+    <string name="main_activity_quit">Click duas vezes para sair.</string>
+
+    <!-- Event Activity -->
+    <string name="event_acitivty_no_event">Nenhum evento programado...</string>
+
+    <!-- Day of The Week -->
+    <string name="sunday">Domingo</string>
+    <string name="monday">Segunda-feira</string>
+    <string name="tuesday">Terça-feira</string>
+    <string name="wednesday">Quarta-feira</string>
+    <string name="thursday">Quinta-feira</string>
+    <string name="friday">Sexta-feira</string>
+    <string name="saturday">Sábado</string>
+    <string name="exception_erro_err_internet_disconnected">Não foi possível encontrar conexão com a internet. Tente novamente!</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

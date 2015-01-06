@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:orientation="horizontal"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/item_menu_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_menu_igrejas"/>
+
+    <TextView
+        android:id="@+id/item_menu_name"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Igrejas"
+        android:textColor="@color/item_menu"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

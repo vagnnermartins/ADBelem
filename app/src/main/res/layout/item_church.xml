@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/tile_heigth"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/text_padding_left"
+    android:paddingRight="@dimen/text_padding_left"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/item_church_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sede"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/primary_text_font" />
+
+    <TextView
+        android:id="@+id/item_church_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Rua Conselheiro Cotegipe, 273 - Belenzinho, São Paulo - SP, 03058-000"
+        android:textColor="@color/second_text"
+        android:textSize="@dimen/second_text_font" />
+
+
+</LinearLayout>

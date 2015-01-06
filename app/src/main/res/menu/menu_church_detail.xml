@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vagnnermartins.adbelem.ui.activity.ChurchDetailActivity">
+
+    <item
+        android:id="@+id/menu_church_detail_follow"
+        android:orderInCategory="100"
+        android:title="@string/church_detail_follow"
+        android:checkable="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_church_detail_congragations"
+        android:orderInCategory="100"
+        android:title="@string/church_detail_congregations"
+        app:showAsAction="never" />
+</menu>
