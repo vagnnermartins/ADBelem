@@ -135,8 +135,11 @@ public class CongregationsFragment extends Fragment implements SwipeRefreshLayou
         return new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                app.selectedChurch = (ChurchParse) adapterView.getItemAtPosition(position);
-                NavegacaoUtil.navegar(getActivity(), ChurchDetailActivity.class);
+                ChurchParse selected = (ChurchParse) adapterView.getItemAtPosition(position);
+                if(mMode == null || selected == selectedChurch){
+                    app.selectedChurch = selected;
+                    NavegacaoUtil.navegar(getActivity(), ChurchDetailActivity.class);
+                }
                 closeActionMode();
             }
         };

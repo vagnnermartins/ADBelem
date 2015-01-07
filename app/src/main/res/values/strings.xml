@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">AD Belém</string>
-    <string name="key_google_map_dev_home">AIzaSyAElC9Tt2G808nMjmXAWlhCpCQp29DhPmY</string>
+    <string name="key_google_map_dev_call">AIzaSyAElC9Tt2G808nMjmXAWlhCpCQp29DhPmY</string>
+    <string name="key_google_map_dev_home">AIzaSyDMZyS6lXWYfXrWzkyOhyipu0mCL_HpBo4</string>
     <string name="information">INFORMAÇÕES</string>
     <string name="location">LOCALIZAÇÃO</string>
     <string name="agenda">AGENDA</string>
@@ -60,8 +61,5 @@
     <string name="friday">Sexta-feira</string>
     <string name="saturday">Sábado</string>
     <string name="exception_erro_err_internet_disconnected">Não foi possível encontrar conexão com a internet. Tente novamente!</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 
 </resources>
