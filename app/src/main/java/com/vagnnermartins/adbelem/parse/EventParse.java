@@ -30,6 +30,7 @@ public class EventParse extends ParseObject{
         ParseQuery query = ParseQuery.getQuery(EventParse.class);
         query.fromLocalDatastore();
         query.orderByAscending(DATE);
+        query.include(CHURCH);
         query.findInBackground(callback);
     }
 

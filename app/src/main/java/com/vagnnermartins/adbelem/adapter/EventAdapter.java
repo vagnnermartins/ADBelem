@@ -21,10 +21,12 @@ import java.util.List;
 public class EventAdapter extends ArrayAdapter<EventParse> {
 
     private final List<EventParse> itensOriginais;
+    private final boolean isLayoutFull;
 
-    public EventAdapter(Context context, int resource, List<EventParse> objects) {
+    public EventAdapter(Context context, int resource, List<EventParse> objects, boolean isLayoutFull) {
         super(context, resource, objects);
         this.itensOriginais = new ArrayList<EventParse>(objects);
+        this.isLayoutFull = isLayoutFull;
     }
 
     @Override
@@ -42,7 +44,11 @@ public class EventAdapter extends ArrayAdapter<EventParse> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         EventParse item = getItem(position);
-        viewHolder.name.setText(item.getName());
+        String name = item.getName();
+        if(isLayoutFull){
+            name += " - " + item.getChurch().getName();
+        }
+        viewHolder.name.setText(name);
         viewHolder.date.setText(DataUtil.formatDateToString(item.getDate()));
         viewHolder.time.setText(DataUtil.transformDateToSting(item.getDate(), "HH:mm"));
         return convertView;

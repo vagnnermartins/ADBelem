@@ -92,9 +92,12 @@ public class EventsActivity extends ActionBarActivity {
         List<EventParse> list = app.mapEvents.get(app.selectedChurch.getObjectId());
         if(list.isEmpty()){
             ui.message.setVisibility(View.VISIBLE);
-            ui.message.setText(R.string.event_acitivty_no_event);
+            ui.message.setText(R.string.no_church);
+        }else{
+            ui.message.setVisibility(View.GONE);
+            ui.progress.setVisibility(View.GONE);
         }
-        listAdapter = new EventAdapter(this, R.layout.item_event, list);
+        listAdapter = new EventAdapter(this, R.layout.item_event, list, false);
         ui.listView.setAdapter(listAdapter);
     }
 
@@ -198,14 +201,13 @@ public class EventsActivity extends ActionBarActivity {
     private void onClickFollowUnfollow(MenuItem menuItem) {
         SnackBar snackBar;
         selectedEvent.setFollow(!selectedEvent.isFollow());
-        String message = String.format(getString(R.string.event_acitivty_follow_message), selectedEvent.getName());
         if(selectedEvent.isFollow()){
-            snackBar = new SnackBar(this, message);
+            snackBar = new SnackBar(this, String.format(getString(R.string.event_acitivty_follow_message), selectedEvent.getName()));
             app.myEvents.add(selectedEvent);
             menuItem.setChecked(true);
             EventParse.saveEventInLocal(selectedEvent);
         }else{
-            snackBar = new SnackBar(this, message);
+            snackBar = new SnackBar(this, String.format(getString(R.string.event_acitivty_unfollow_message), selectedEvent.getName()));
             app.myEvents.remove(selectedEvent);
             menuItem.setChecked(false);
             EventParse.deleteEventInLocal(selectedEvent);

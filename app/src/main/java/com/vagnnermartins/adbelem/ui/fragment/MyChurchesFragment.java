@@ -68,7 +68,7 @@ public class MyChurchesFragment extends Fragment implements SwipeRefreshLayout.O
         app = (App) getActivity().getApplication();
         ui = new SectorUIHelper(view);
         ui.swipeLayout.setOnRefreshListener(this);
-        ui.swipeLayout.setColorSchemeResources(R.color.churches);
+        ui.swipeLayout.setColorSchemeResources(R.color.my_churches);
         ui.listView.setOnItemClickListener(onItemClickListener());
         ui.searchView.setOnQueryTextListener(onQueryTextListener());
         ui.listView.setOnItemLongClickListener(onItemLongClickListener());

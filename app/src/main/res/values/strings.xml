@@ -34,6 +34,10 @@
     <string name="near_churches_error">Erro ao buscar igrejas próximas</string>
     <string name="near_churches_search_address">Pesquisar endereço</string>
 
+    <!--Fragment My Events-->
+    <string name="error_find_events">Erro ao buscar seus eventos</string>
+    <string name="no_my_event">Você não está participando de algum evento...</string>
+
     <!-- Activity ChurchDetail -->
     <string name="error_find_worship">Erro ao buscar os cultos da igreja</string>
     <string name="church_detail_congregations">Congregações</string>
@@ -52,6 +56,7 @@
     <!-- Event Activity -->
     <string name="event_acitivty_no_event">Nenhum evento programado...</string>
     <string name="event_acitivty_follow_message">Você está seguindo o evento %s</string>
+    <string name="event_acitivty_unfollow_message">Você deixou de seguir o evento %s</string>
 
     <!-- Day of The Week -->
     <string name="sunday">Domingo</string>
