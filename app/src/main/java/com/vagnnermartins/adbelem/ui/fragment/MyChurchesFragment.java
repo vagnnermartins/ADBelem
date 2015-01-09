@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.view.ActionMode;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +17,6 @@ import android.widget.SearchView;
 import com.gc.materialdesign.widgets.SnackBar;
 import com.parse.FindCallback;
 import com.parse.ParseException;
-import com.parse.SaveCallback;
 import com.vagnnermartins.adbelem.R;
 import com.vagnnermartins.adbelem.adapter.ChurchAdapter;
 import com.vagnnermartins.adbelem.app.App;
@@ -28,8 +26,6 @@ import com.vagnnermartins.adbelem.ui.activity.ChurchDetailActivity;
 import com.vagnnermartins.adbelem.ui.helper.SectorUIHelper;
 import com.vagnnermartins.adbelem.util.NavegacaoUtil;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -81,7 +77,7 @@ public class MyChurchesFragment extends Fragment implements SwipeRefreshLayout.O
 
     private void checkStatus(StatusEnum statusEnum){
         if(statusEnum == StatusEnum.INICIO){
-            ChurchParse.findMyChurches(onFindMyChurches());
+            ChurchParse.findMyChurchesInLocal(onFindMyChurches());
             checkStatus(StatusEnum.EXECUTANDO);
         }else if(statusEnum == StatusEnum.EXECUTANDO){
             ui.message.setVisibility(View.GONE);

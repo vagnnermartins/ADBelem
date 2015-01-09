@@ -11,8 +11,15 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/menu_church_detail_agenda"
+        android:orderInCategory="100"
+        android:title="@string/agenda"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/menu_church_detail_congragations"
         android:orderInCategory="100"
         android:title="@string/church_detail_congregations"
         app:showAsAction="never" />
+
 </menu>

@@ -6,7 +6,7 @@
     <string name="key_google_map_dev_home">AIzaSyDMZyS6lXWYfXrWzkyOhyipu0mCL_HpBo4</string>
     <string name="information">INFORMAÇÕES</string>
     <string name="location">LOCALIZAÇÃO</string>
-    <string name="agenda">AGENDA</string>
+    <string name="agenda">Agenda</string>
     <string name="uninformed">Não informado</string>
 
     <!-- Menu -->
@@ -51,6 +51,7 @@
 
     <!-- Event Activity -->
     <string name="event_acitivty_no_event">Nenhum evento programado...</string>
+    <string name="event_acitivty_follow_message">Você está seguindo o evento %s</string>
 
     <!-- Day of The Week -->
     <string name="sunday">Domingo</string>

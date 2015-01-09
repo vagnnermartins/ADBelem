@@ -29,6 +29,7 @@ public class App extends Application {
     public List<ChurchParse> listCongragations;
     public List<ChurchParse> allChurches;
     public List<ChurchParse> myChurches;
+    public List<EventParse> myEvents;
     public ChurchParse selectedChurch;
     public Map<String, List<ChurchParse>> mapCongragations;
     public Map<String, List<WorshipParse>> mapWorship;

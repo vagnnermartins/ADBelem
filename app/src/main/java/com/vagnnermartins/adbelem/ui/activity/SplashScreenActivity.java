@@ -9,14 +9,14 @@ import com.vagnnermartins.adbelem.R;
 import com.vagnnermartins.adbelem.app.App;
 import com.vagnnermartins.adbelem.enums.StatusEnum;
 import com.vagnnermartins.adbelem.parse.ChurchParse;
+import com.vagnnermartins.adbelem.parse.EventParse;
 import com.vagnnermartins.adbelem.util.NavegacaoUtil;
 
-import java.util.HashSet;
 import java.util.List;
 
 public class SplashScreenActivity extends ActionBarActivity {
 
-    private static final int TOTAL_UPDATE = 1;
+    private static final int TOTAL_UPDATE = 2;
 
     private App app;
     private int updated;
@@ -36,7 +36,8 @@ public class SplashScreenActivity extends ActionBarActivity {
     private void checkStatus(StatusEnum statusEnum){
         if(statusEnum == StatusEnum.INICIO){
             updated = 0;
-            ChurchParse.findMyChurches(onFindMyChurches());
+            ChurchParse.findMyChurchesInLocal(onFindMyChurches());
+            EventParse.findMyEventsInLocal(onFindMyEvents());
             checkStatus(StatusEnum.EXECUTANDO);
         }else if(statusEnum == StatusEnum.EXECUTANDO){
         }else if(statusEnum == StatusEnum.EXECUTADO){
@@ -57,6 +58,16 @@ public class SplashScreenActivity extends ActionBarActivity {
             @Override
             public void done(List<ChurchParse> result, ParseException e) {
                 app.myChurches = result;
+                checkStatus(StatusEnum.EXECUTADO);
+            }
+        };
+    }
+
+    private FindCallback<EventParse> onFindMyEvents() {
+        return new FindCallback<EventParse>() {
+            @Override
+            public void done(List<EventParse> result, ParseException e) {
+                app.myEvents = result;
                 checkStatus(StatusEnum.EXECUTADO);
             }
         };

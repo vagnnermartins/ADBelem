@@ -65,7 +65,7 @@ public class ChurchParse extends ParseObject {
         church.unpinInBackground();
     }
 
-    public static void findMyChurches(FindCallback<ChurchParse> callback){
+    public static void findMyChurchesInLocal(FindCallback<ChurchParse> callback){
         ParseQuery query = ParseQuery.getQuery(ChurchParse.class);
         query.fromLocalDatastore();
         query.orderByAscending(SECTOR);

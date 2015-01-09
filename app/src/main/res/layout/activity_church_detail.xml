@@ -136,7 +136,8 @@
                     android:text="@string/agenda"
                     android:textAllCaps="true"
                     android:textColor="?attr/colorAccent"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"

@@ -239,7 +239,6 @@ public class ChurchDetailActivity extends ActionBarActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                overridePendingTransition(R.anim.in_baixo_para_cima, R.anim.out_cima_para_baixo);
                 NavegacaoUtil.navegar(ChurchDetailActivity.this, EventsActivity.class);
             }
         };
@@ -318,6 +317,9 @@ public class ChurchDetailActivity extends ActionBarActivity {
                 break;
             case R.id.menu_church_detail_follow:
                 onClickFollowUnfollow(item);
+                break;
+            case R.id.menu_church_detail_agenda:
+                NavegacaoUtil.navegar(ChurchDetailActivity.this, EventsActivity.class);
                 break;
         }
         return super.onOptionsItemSelected(item);

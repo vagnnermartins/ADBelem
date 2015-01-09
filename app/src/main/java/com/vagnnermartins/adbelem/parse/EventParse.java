@@ -16,6 +16,7 @@ public class EventParse extends ParseObject{
     private static final String NAME = "name";
     private static final String DATE = "date";
     private static final String CHURCH = "church";
+    private static final String FOLLOW = "follow";
 
     public static void findEventsByChurch(FindCallback<EventParse> callback, ChurchParse church){
         ParseQuery query = ParseQuery.getQuery(EventParse.class);
@@ -23,6 +24,21 @@ public class EventParse extends ParseObject{
         query.whereEqualTo(CHURCH, church);
         query.include(CHURCH);
         query.findInBackground(callback);
+    }
+
+    public static void findMyEventsInLocal(FindCallback<EventParse> callback){
+        ParseQuery query = ParseQuery.getQuery(EventParse.class);
+        query.fromLocalDatastore();
+        query.orderByAscending(DATE);
+        query.findInBackground(callback);
+    }
+
+    public static void saveEventInLocal(EventParse event){
+        event.pinInBackground();
+    }
+
+    public static void deleteEventInLocal(EventParse event){
+        event.unpinInBackground();
     }
 
     public String getName(){
@@ -33,6 +49,12 @@ public class EventParse extends ParseObject{
     }
     public ChurchParse getChurch(){
         return (ChurchParse) getParseObject(CHURCH);
+    }
+    public boolean isFollow(){
+        return getBoolean(FOLLOW);
+    }
+    public void setFollow(boolean isFollow){
+        put(FOLLOW, isFollow);
     }
     @Override
     public String toString() {
