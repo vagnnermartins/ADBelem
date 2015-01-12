@@ -247,13 +247,13 @@ public class MyEventsFragment extends Fragment implements SwipeRefreshLayout.OnR
             snackBar = new SnackBar(getActivity(), String.format(getString(R.string.event_acitivty_follow_message), selectedEvent.getName()));
             app.myEvents.add(selectedEvent);
             menuItem.setChecked(true);
-            EventParse.saveEventInLocal(selectedEvent);
+            EventParse.saveEventInLocal(getActivity(), selectedEvent);
         }else{
             snackBar = new SnackBar(getActivity(), String.format(getString(R.string.event_acitivty_unfollow_message), selectedEvent.getName()));
             app.myEvents.remove(selectedEvent);
             menuItem.setChecked(false);
             listAdapter.remove(selectedEvent);
-            EventParse.deleteEventInLocal(selectedEvent);
+            EventParse.deleteEventInLocal(getActivity(), selectedEvent);
         }
         checkResult();
         snackBar.show();

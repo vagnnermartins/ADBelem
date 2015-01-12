@@ -1,17 +1,22 @@
 package com.vagnnermartins.adbelem.parse;
 
+import android.content.Context;
+
 import com.parse.FindCallback;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.vagnnermartins.adbelem.util.AlarmUtil;
 
+import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * Created by vagnnermartins on 04/01/15.
  */
 @ParseClassName("Events")
-public class EventParse extends ParseObject{
+public class EventParse extends ParseObject implements Serializable{
 
     private static final String NAME = "name";
     private static final String DATE = "date";
@@ -34,13 +39,16 @@ public class EventParse extends ParseObject{
         query.findInBackground(callback);
     }
 
-    public static void saveEventInLocal(EventParse event){
+    public static void saveEventInLocal(Context context, EventParse event){
+        AlarmUtil.scheduledEventNotification(context, event);
         event.pinInBackground();
     }
 
-    public static void deleteEventInLocal(EventParse event){
+    public static void deleteEventInLocal(Context context, EventParse event){
+        AlarmUtil.cancelScheduleEventNotification(context, event);
         event.unpinInBackground();
     }
+
 
     public String getName(){
         return getString(NAME);

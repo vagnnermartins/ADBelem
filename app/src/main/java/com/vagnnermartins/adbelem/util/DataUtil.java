@@ -24,7 +24,7 @@ public class DataUtil {
         StringBuilder sb = new StringBuilder();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(time);
-        sb.append(getDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK)));
+        sb.append(checkDay(calendar));
         sb.append(", ");
         sb.append(calendar.get(Calendar.DAY_OF_MONTH));
         sb.append(" de ");
@@ -33,8 +33,33 @@ public class DataUtil {
         sb.append(calendar.get(Calendar.YEAR));
         return sb.toString();
     }
-	
-	public static double diferencaEmDias(Date dataInicial, Date dataFinal){
+
+    private static String checkDay(Calendar calendar) {
+        String result = "";
+        Calendar today = Calendar.getInstance();
+        Calendar tomorrow = Calendar.getInstance();
+        tomorrow.add(Calendar.DAY_OF_MONTH, 1);
+        Calendar yesterday = Calendar.getInstance();
+        yesterday.add(Calendar.DAY_OF_MONTH, -1);
+        if(today.get(Calendar.YEAR) == calendar.get(Calendar.YEAR) &&
+                today.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
+                today.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)){
+            result = "Hoje";
+        }else if(tomorrow.get(Calendar.YEAR) == calendar.get(Calendar.YEAR) &&
+                tomorrow.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
+                tomorrow.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)){
+            result = "Amanhã";
+        }else if(yesterday.get(Calendar.YEAR) == calendar.get(Calendar.YEAR) &&
+                yesterday.get(Calendar.MONTH) == calendar.get(Calendar.MONTH) &&
+                yesterday.get(Calendar.DAY_OF_MONTH) == calendar.get(Calendar.DAY_OF_MONTH)){
+            result = "Ontem";
+        }else{
+            result = getDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK));
+        }
+        return result;
+    }
+
+    public static double diferencaEmDias(Date dataInicial, Date dataFinal){
         double result = 0;  
         long diferenca = dataFinal.getTime() - dataInicial.getTime();  
         double diferencaEmDias = (diferenca /1000) / 60 / 60 /24;   

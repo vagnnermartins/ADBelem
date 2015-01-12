@@ -205,12 +205,12 @@ public class EventsActivity extends ActionBarActivity {
             snackBar = new SnackBar(this, String.format(getString(R.string.event_acitivty_follow_message), selectedEvent.getName()));
             app.myEvents.add(selectedEvent);
             menuItem.setChecked(true);
-            EventParse.saveEventInLocal(selectedEvent);
+            EventParse.saveEventInLocal(this, selectedEvent);
         }else{
             snackBar = new SnackBar(this, String.format(getString(R.string.event_acitivty_unfollow_message), selectedEvent.getName()));
             app.myEvents.remove(selectedEvent);
             menuItem.setChecked(false);
-            EventParse.deleteEventInLocal(selectedEvent);
+            EventParse.deleteEventInLocal(this, selectedEvent);
         }
         snackBar.show();
     }
