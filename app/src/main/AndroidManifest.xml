@@ -6,28 +6,26 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
-    <!-- Required to show current location -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name=".app.App"
+        android:name="com.vagnnermartins.adbelem.app.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/key_google_map_dev_home" />
+            android:value="@string/key_google_map_dev_call" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".ui.activity.SplashScreenActivity"
+            android:name="com.vagnnermartins.adbelem.ui.activity.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
@@ -38,30 +36,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.ChurchDetailActivity"
+            android:name="com.vagnnermartins.adbelem.ui.activity.ChurchDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name=".ui.activity.CongregationsActivity"
+            android:name="com.vagnnermartins.adbelem.ui.activity.CongregationsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name=".ui.activity.EventsActivity"
+            android:name="com.vagnnermartins.adbelem.ui.activity.EventsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="com.vagnnermartins.adbelem.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
         </activity>
 
         <receiver
-            android:name=".receive.EventAlarmReceiver"
+            android:name="com.vagnnermartins.adbelem.receive.EventAlarmReceiver"
             android:enabled="true"
             android:exported="true" >
+        </receiver>
+        <receiver
+            android:name="com.vagnnermartins.adbelem.receive.WakeUpReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
         </receiver>
     </application>
 

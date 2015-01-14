@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import com.parse.FindCallback;
+import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.vagnnermartins.adbelem.R;
 import com.vagnnermartins.adbelem.app.App;
@@ -31,6 +32,7 @@ public class SplashScreenActivity extends ActionBarActivity {
 
     private void init() {
         app = (App) getApplication();
+        ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
 
     private void checkStatus(StatusEnum statusEnum){

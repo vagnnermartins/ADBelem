@@ -58,6 +58,9 @@
     <string name="event_acitivty_follow_message">Você está seguindo o evento %s</string>
     <string name="event_acitivty_unfollow_message">Você deixou de seguir o evento %s</string>
 
+    <!--YouTube Fragment-->
+    <string name="youtube_no_video">No momento estamos sem vídeos</string>
+
     <!-- Day of The Week -->
     <string name="sunday">Domingo</string>
     <string name="monday">Segunda-feira</string>
@@ -66,6 +69,17 @@
     <string name="thursday">Quinta-feira</string>
     <string name="friday">Sexta-feira</string>
     <string name="saturday">Sábado</string>
-    <string name="exception_erro_err_internet_disconnected">Não foi possível encontrar conexão com a internet. Tente novamente!</string>
 
+    <!-- Erros -->
+    <string name="falha_conexao">Falha na Conexão</string>
+    <string name="exception_erro">ERRO</string>
+    <string name="exception_erro_desconhecido">Erro desconhecido</string>
+    <string name="exception_erro_400_bad_request">Não foi possível localizar o endereço solicitado</string>
+    <string name="exception_erro_401_unauthorized">Usuário ou Senha inválidos</string>
+    <string name="exception_erro_500_internal_server_error">Ah, que pena, nosso servidor encontra-se em manutenção, tente mais tarde!</string>
+    <string name="exception_erro_502_bad_gateway">Ah, que pena, não foi possível comunicar-se com o serviço, posíveis causas: Gateway/Proxy</string>
+    <string name="exception_erro_408_bad_gateway">Não foi possível efetuar login, verifique sua conexão com a internet.</string>
+    <string name="exception_erro_504_gateway_time_out">Ah, que pena, não foi possível buscar a requisição no tempo máximo de espera</string>
+    <string name="sem_gps_mensagem">Ops! Não foi possível acessar a sua localização atual. Verifique o status do seu GPS.</string>
+    <string name="exception_erro_err_internet_disconnected">Não foi possível encontrar conexão com a internet. Tente novamente!</string>
 </resources>

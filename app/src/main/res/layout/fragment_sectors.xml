@@ -33,7 +33,8 @@
             android:id="@+id/sectors_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sectors_scroll" />
+            android:layout_below="@+id/sectors_scroll"
+            android:divider="@android:color/transparent"/>
 
         <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
             android:id="@+id/sectors_progress"

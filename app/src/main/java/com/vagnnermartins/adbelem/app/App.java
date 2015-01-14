@@ -9,6 +9,7 @@ import com.parse.Parse;
 import com.parse.ParseObject;
 import com.vagnnermartins.adbelem.R;
 import com.vagnnermartins.adbelem.constants.Keys;
+import com.vagnnermartins.adbelem.dto.VideoDTO;
 import com.vagnnermartins.adbelem.parse.ChurchParse;
 import com.vagnnermartins.adbelem.parse.EventParse;
 import com.vagnnermartins.adbelem.parse.WorshipParse;
@@ -18,7 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by vagnnermartins on 26/12/14.
@@ -30,6 +30,7 @@ public class App extends Application {
     public List<ChurchParse> allChurches;
     public List<ChurchParse> myChurches;
     public List<EventParse> myEvents;
+    public List<VideoDTO> videos;
     public ChurchParse selectedChurch;
     public Map<String, List<ChurchParse>> mapCongragations;
     public Map<String, List<WorshipParse>> mapWorship;

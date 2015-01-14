@@ -34,6 +34,7 @@ public class EventParse extends ParseObject implements Serializable{
     public static void findMyEventsInLocal(FindCallback<EventParse> callback){
         ParseQuery query = ParseQuery.getQuery(EventParse.class);
         query.fromLocalDatastore();
+        query.whereGreaterThanOrEqualTo(DATE, new Date());
         query.orderByAscending(DATE);
         query.include(CHURCH);
         query.findInBackground(callback);

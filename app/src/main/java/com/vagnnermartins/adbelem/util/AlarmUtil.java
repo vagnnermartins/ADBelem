@@ -9,6 +9,7 @@ import com.vagnnermartins.adbelem.parse.EventParse;
 import com.vagnnermartins.adbelem.receive.EventAlarmReceiver;
 
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by vagnnermartins on 11/01/15.
@@ -27,6 +28,12 @@ public class AlarmUtil {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 //        alarmManager.set(AlarmManager.RTC_WAKEUP, event.getDate().getTime(), pendingIntent);
+    }
+
+    public static void scheduleEventsNotification(Context context, List<EventParse> events){
+        for(EventParse event : events){
+            scheduledEventNotification(context, event);
+        }
     }
 
     public static void cancelScheduleEventNotification(Context context, EventParse event){

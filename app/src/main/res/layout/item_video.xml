@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:minHeight="?android:attr/listPreferredItemHeightLarge"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="4dp"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/item_video_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_weight="3.7"
+        android:adjustViewBounds="true"
+        android:gravity="center_vertical"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="6"
+            android:maxLines="2"
+            android:text="IEADSP - Pr. Aldery Nelson Rocha - TV ADBELEM"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_video_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="6"
+            android:maxLines="2"
+            android:text="IEADSP - Pr. Aldery Nelson Rocha - TV ADBELEM"
+            android:textColor="@color/second_text" />
+    </LinearLayout>
+
+</LinearLayout>
