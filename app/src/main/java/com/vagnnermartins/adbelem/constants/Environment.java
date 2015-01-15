@@ -5,5 +5,5 @@ package com.vagnnermartins.adbelem.constants;
  */
 public class Environment {
 
-    public static final String GET_YOUTUBE_VIDEOS = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC933E0D0Bbkdy-GS9YscYdw&maxResults=50";
+    public static final String GET_YOUTUBE_VIDEOS = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCGeIoNYN6X_OVXY_ZLlLxkA&key=AIzaSyBTYMejmwKbr1-Kv1IVZO10fxoQ17QbHGw&maxResults=50";
 }

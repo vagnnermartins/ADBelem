@@ -42,7 +42,7 @@ public class YouTubeAdapter extends ArrayAdapter<VideoDTO> {
         VideoDTO item = getItem(position);
         viewHolder.title.setText(item.getTitle());
         viewHolder.description.setText(item.getDescription());
-        UrlImageViewHelper.setUrlDrawable(viewHolder.image, item.getThumbnail().getUrl(), R.drawable.youtube);
+        UrlImageViewHelper.setUrlDrawable(viewHolder.image, item.getThumbnail().getUrl());
         return convertView;
     }
 

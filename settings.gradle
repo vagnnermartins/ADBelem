@@ -1,1 +1,1 @@
-include ':app', ':material', ':ytLib'
+include ':app', ':material'

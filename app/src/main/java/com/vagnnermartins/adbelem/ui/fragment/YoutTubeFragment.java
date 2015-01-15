@@ -7,8 +7,11 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 
 import com.gc.materialdesign.widgets.SnackBar;
+import com.laimiux.youtube.PlayerActivity;
 import com.vagnnermartins.adbelem.R;
 import com.vagnnermartins.adbelem.adapter.ChurchAdapter;
 import com.vagnnermartins.adbelem.adapter.YouTubeAdapter;
@@ -55,6 +58,7 @@ public class YoutTubeFragment extends Fragment implements SwipeRefreshLayout.OnR
         app = (App) getActivity().getApplication();
         ui.swipeLayout.setOnRefreshListener(this);
         ui.swipeLayout.setColorSchemeResources(R.color.youtube);
+        ui.listView.setOnItemClickListener(onItemClickListener());
     }
 
     private void checkStatus(StatusEnum statusEnum){
@@ -121,6 +125,16 @@ public class YoutTubeFragment extends Fragment implements SwipeRefreshLayout.OnR
                     error = true;
                 }
                 checkStatus(StatusEnum.EXECUTADO);
+            }
+        };
+    }
+
+    private AdapterView.OnItemClickListener onItemClickListener() {
+        return new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                VideoDTO clicked = (VideoDTO) parent.getItemAtPosition(position);
+                PlayerActivity.showPlayer(getActivity(), getString(R.string.key_google_map_dev_call), clicked.getVideoId());
             }
         };
     }

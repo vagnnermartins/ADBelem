@@ -5,6 +5,12 @@ package com.vagnnermartins.adbelem.constants;
  */
 public class Keys {
 
+    /**
+     * Application ID gerado no Parse API
+     */
     public static final String APP_ID = "";
+    /**
+     * Client Key gerado no Parse API
+     */
     public static final String CLIENT_KEY = "";
 }
